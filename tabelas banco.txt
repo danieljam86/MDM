@@ -1,0 +1,82 @@
+Data Source=DESKTOP-HICL4N5;Initial Catalog=mdmadm;Integrated Security=True
+
+Data Source=DESKTOP-HICL4N5;Initial Catalog=mdmadm;Integrated Security=True;Connect Timeout=30
+BaseLiberacao
+
+id
+cod
+cond
+carteira
+prioridade
+mes
+ano
+
+Create table BaseLiberacao
+
+(
+    id int IDENTITY(100,1)primary key,
+    cod int,
+	cond varchar(200),
+	carteira varchar(30),
+	prioridade varchar(20),
+	mes int,
+	ano int
+)
+
+
+Liberacao
+
+id
+cod
+cond
+dataLib
+dataLibG1
+dataLibP
+dataLibC2
+dataLibG2
+carteira
+prioridade
+pendenciaC
+pendenciaG
+pendenciaP
+mes
+ano
+
+Create table Liberacao
+
+(
+    id int IDENTITY(1,1)primary key,
+    cod int,
+	cond varchar(200),
+	dataLib datetime,
+	dataLibG1 datetime,
+	dataLibP datetime,
+	dataLibC2 datetime,
+	dataLibG2 datetime,
+	carteira varchar(30),
+	prioridade varchar(200),
+	pendenciaC varchar(200),
+	pendenciaG varchar(200),
+	pendenciaP varchar(200),							
+	mes int,
+	ano int
+)
+
+
+usuarios
+
+id
+login
+nome
+senha
+perfil
+
+Create table usuarios
+
+(
+    id int IDENTITY(1,1)primary key,
+    login_ varchar(200),
+	nome varchar(200),
+	senha varchar(200),
+	perfil varchar(200),
+)
